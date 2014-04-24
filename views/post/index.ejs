@@ -1,0 +1,17 @@
+<h1> Posts </h1>
+
+
+<% _.forEach(posts, function(post){ %>
+
+	<ul class= "list-group">
+		<li class= "list-group-item">
+			<%= post.body %>
+		</li>
+		<ul>
+			<li class= "list-group-item">
+				<%= post.ownedBy.name %> - <%= post.ownedBy.createdAt %>
+			</li>
+		</ul>
+	</ul>
+
+<% }) %>
